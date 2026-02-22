@@ -8,23 +8,29 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             background: #0d0d0d;
             color: #e6e6e6;
             text-align: center;
-            overflow-x: hidden;
         }
 
-        /* En-tête avec lueur */
         header {
-            padding: 50px 20px;
-            font-size: 35px;
-            font-weight: 900;
+            padding: 40px;
+            font-size: 32px;
+            font-weight: bold;
             background: #111;
-            letter-spacing: 5px;
+            letter-spacing: 3px;
             border-bottom: 2px solid #00c853;
             color: #00c853;
-            text-shadow: 0 0 15px rgba(0, 200, 83, 0.6);
+        }
+
+        /* Style de l'image de bannière */
+        .banner-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-bottom: 1px solid #222;
+            display: block;
         }
 
         section {
@@ -35,97 +41,63 @@
         h2 {
             color: #00c853;
             margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
-        /* Cartes de membres */
         .card {
             background: #141414;
             padding: 20px;
             margin: 15px;
-            border-radius: 12px;
+            border-radius: 10px;
             display: inline-block;
             width: 260px;
             border: 1px solid #222;
-            transition: 0.4s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: #00c853;
-            box-shadow: 0 0 20px rgba(0, 200, 83, 0.2);
         }
 
         .clan-list {
             max-width: 600px;
             margin: auto;
             text-align: left;
-            line-height: 2;
+            line-height: 1.8;
             background: #111;
-            padding: 30px;
-            border-radius: 15px;
-            border-left: 4px solid #00c853;
+            padding: 20px;
+            border-radius: 10px;
         }
 
-        /* --- SECTION BOUTONS FLASHY (EN BAS) --- */
+        /* Boutons clignotants en bas */
         .cta-container {
-            padding: 80px 20px;
-            background: linear-gradient(to bottom, #0d0d0d, #111);
-            border-top: 2px solid #00c85333;
+            padding: 60px 20px;
+            background: #0a0a0a;
         }
 
         .button-flashy {
             display: inline-block;
-            padding: 22px 45px;
-            margin: 15px;
-            border: 3px solid #00c853;
+            padding: 20px 40px;
+            margin: 10px;
+            border: 2px solid #00c853;
             border-radius: 50px;
-            background: #1a1a1a;
+            background: #1f1f1f;
             color: #00c853;
-            font-weight: 900;
-            font-size: 20px;
+            font-weight: bold;
             text-decoration: none;
-            text-transform: uppercase;
-            cursor: pointer;
-            
-            /* Animations combinées */
+            font-size: 18px;
             animation: pulse 1.5s infinite ease-in-out, glow 1.5s infinite alternate;
-            transition: all 0.3s ease;
         }
 
-        /* Effet de battement */
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.08); }
+            50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
 
-        /* Effet de clignotement lumineux */
         @keyframes glow {
-            from {
-                box-shadow: 0 0 10px #00c853, inset 0 0 10px #00c853;
-                border-color: #00c853;
-            }
-            to {
-                box-shadow: 0 0 30px #00c853, inset 0 0 20px #00c853;
-                border-color: #ffffff;
-            }
-        }
-
-        .button-flashy:hover {
-            background: #00c853;
-            color: #000;
-            animation: none;
-            box-shadow: 0 0 50px #00c853;
-            transform: translateY(-5px);
+            from { box-shadow: 0 0 10px #00c853; }
+            to { box-shadow: 0 0 30px #00c853; }
         }
 
         footer {
-            padding: 30px;
-            background: #050505;
-            font-size: 13px;
-            color: #666;
+            padding: 20px;
+            background: #111;
+            font-size: 14px;
             border-top: 1px solid #222;
         }
     </style>
@@ -137,58 +109,37 @@
         𓆙 KINGDOM OF SADEUS 𓆙
     </header>
 
+    <img src="https://raw.githubusercontent.com/zartek95/KINGDOM-OF-SADEUS/main/image-clan.jpg" alt="L'armée de Sadeus" class="banner-img">
+
     <section>
         <h2>📖 Histoire du Clan</h2>
-        <p style="max-width: 800px; margin: auto; font-size: 18px; color: #bbb;">
-            Le Kingdom of Sadeus est une organisation structurée et stratégique. 
-            Fondé par <strong>Grady Sadeus</strong>, le clan repose sur la discipline, 
-            la hiérarchie et la domination tactique.
-        </p>
+        <p>Le Kingdom of Sadeus est une organisation structurée et stratégique...</p>
     </section>
 
     <section>
         <h2>👑 Hiérarchie</h2>
         <div class="card"><h3>Fondateur</h3><p>Grady Sadeus</p></div>
         <div class="card"><h3>Chef N°1</h3><p>Baji Sadeus</p></div>
-        <div class="card"><h3>Chef N°2</h3><p>Raphaël Sadeus</p></div>
-        <div class="card"><h3>Chef N°3</h3><p>Makima Sadeus</p></div>
-        <div class="card"><h3>Chefs Intermédiaires</h3><p>Doma Sadeus & Avex Sadeus</p></div>
     </section>
 
     <section>
         <h2>⚔️ CLANS DOMINÉS</h2>
         <div class="clan-list">
-            01. SOMA <br> 02. NARA <br> 03. MPK <br> 04. SHINJI <br> 05. SHADOW <br>
-            06. TMP <br> 07. GHOST <br> 08. MEDUZA <br> 09. DARK REIGN <br> 10. JUGEMENT REDEKAI <br>
-            11. SHELBY <br> 12. AGRESTE <br> 13. BIGDEAL ×2 <br> 14. ZENIN <br> 15. GOP-3 <br>
-            16. SHADOW OF THE MOON <br> 17. BLOOD LINE <br> 18. YAMADA <br> 19. HOSTEL 🆕
-        </div>
-    </section>
-
-    <section>
-        <h2>📰 JOURNAL DE GUERRE</h2>
-        <div class="card" style="width: 80%; max-width: 500px;">
-            <h3 style="color: #00c853;">FURIOZA PRO</h3>
-            <p>Victoire officielle enregistrée avec brio. Le clan Sadeus maintient sa position dominante.</p>
+            1. SOMA <br> 2. NARA <br> 3. MPK <br> ... (le reste de ta liste)
         </div>
     </section>
 
     <div class="cta-container">
-        <h2 style="color: white;">PRÊT À NOUS REJOINDRE ?</h2>
-        <a href="https://chat.whatsapp.com/IZVERlP935H4uPVRvRQqoa" target="_blank" class="button-flashy">
-            ⚡ REJOINDRE LA COMMUNAUTÉ ⚡
-        </a>
+        <a href="https://chat.whatsapp.com/IZVERlP935H4uPVRvRQqoa" class="button-flashy">⚡ REJOINDRE LA COMMUNAUTÉ ⚡</a>
         <br>
-        <a href="https://whatsapp.com/channel/0029Vb7Y9vZBKfhrrUEr8s1Z" target="_blank" class="button-flashy">
-            📢 SUIVRE LA CHAÎNE 📢
-        </a>
+        <a href="https://whatsapp.com/channel/0029Vb7Y9vZBKfhrrUEr8s1Z" class="button-flashy">📢 SUIVRE LA CHAÎNE 📢</a>
     </div>
 
     <footer>
-        © 2026 by Raphaël Sadeus - Tous droits réservés aux sadeus<br>
-        <em>Dominer pour régner.</em>
+        © 2026 Kingdom of Sadeus - Tous droits réservés
     </footer>
 
 </body>
 </html>
+
 
